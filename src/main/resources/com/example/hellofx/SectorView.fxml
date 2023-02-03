@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="474.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hellofx.SceneController">
+    <children>
+        <VBox prefHeight="474.0" prefWidth="82.0" style="-fx-background-color: #5B8FB9;">
+            <children>
+                <VBox prefHeight="233.0" prefWidth="82.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#switchTohelloView" prefHeight="237.0" prefWidth="78.0" style="-fx-background-color: #5B8FB9;" text="HOME" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="243.0" prefWidth="82.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#switchTomainMenu" prefHeight="240.0" prefWidth="82.0" style="-fx-background-color: #5B8FB9;" text="BACK" textFill="#f7f7f7">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <ScrollPane layoutX="82.0" prefHeight="474.0" prefWidth="766.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99999.0" prefWidth="751.0">
+                    <children>
+                        <HBox layoutX="-2.0" prefHeight="115.0" prefWidth="754.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Article header">
+                                    <font>
+                                        <Font size="36.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="7.0" left="275.0" top="20.0" />
+                                    </HBox.margin>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <Text layoutX="319.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Content of the article" />
+                    </children></AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
