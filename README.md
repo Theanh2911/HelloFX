@@ -1,2 +1,1 @@
-# HelloFX
- initial code
+Dùng Intellij
