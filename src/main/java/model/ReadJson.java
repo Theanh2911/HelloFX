@@ -1,3 +1,5 @@
+package model;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,13 +12,13 @@ import java.util.ArrayList;
 
 public class ReadJson {
     public static ArrayList<diadiem> listdiadiem = new ArrayList<diadiem>();
+    public static ArrayList<String> arrayTenDiaDiem = new ArrayList<String>();
     public static void main( String[] args){
         JSONParser jsonP = new JSONParser();
         try(FileReader reader = new FileReader("C:\\Users\\LENOVO\\IdeaProjects\\History_Project\\src\\diadiem.json")) {
             Object obj = jsonP.parse(reader);
             JSONArray empList = (JSONArray) obj;
             empList.forEach(emp -> parseEmpObj((JSONObject)emp));
-          System.out.println(listdiadiem.get(1).nhanvat);
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -34,6 +36,7 @@ public class ReadJson {
         ArrayList<String> nhanvat = new ArrayList<String>();
         nhanvat = (ArrayList<String>) emp.get("Historical_Characters");
         listdiadiem.add(new diadiem(ten,sukien,nhanvat));
+        arrayTenDiaDiem.add(ten);
 
     }
 }
