@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.ReadJson;
 
 public class SceneController {
 
@@ -56,14 +57,17 @@ public class SceneController {
         stage.show();
     }
 
-    ArrayList<String> words = new ArrayList<>(
-            Arrays.asList("test", "dog","Human", "Days of our life", "The best day",
-                    "Friends", "Animal", "Human", "Humans", "Bear", "Life",
-                    "This is some text", "Words", "222", "Bird", "Dog", "A few words",
-                    "Subscribe!", "SoftwareEngineeringStudent", "You got this!!",
-                    "Super Human", "Super", "Like")
-    );
+//   ArrayList<String> words = new ArrayList<>(
+//            Arrays.asList("test", "dog","Human", "Days of our life", "The best day",
+//                   "Friends", "Animal", "Human", "Humans", "Bear", "Life",
+//                    "This is some text", "Words", "222", "Bird", "Dog", "A few words",
+//                 "Subscribe!", "SoftwareEngineeringStudent", "You got this!!",
+//                   "Super Human", "Super", "Like")
+//   );
 
+    String arr[]= ReadJson.getJson().toArray(new String[0]);
+    ArrayList<String> words = new ArrayList<>(
+           Arrays.asList(arr));
     @FXML
     private TextField searchBar;
 
